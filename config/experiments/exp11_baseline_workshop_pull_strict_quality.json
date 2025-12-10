@@ -1,0 +1,41 @@
+{
+  "experiment_id": "exp11_baseline_workshop_pull_strict_quality",
+  "description": "Quality comparison: single workshop, pull mode, STRICT quality requirements - selective disassembly with high thresholds (compare with exp01 mixed-quality and exp10 no-quality)",
+  "output_prefix": "baseline_pull_strict",
+  
+  "simulation": {
+    "weeks": 2,
+    "start_date": "2025-01-01T00:00:00"
+  },
+  
+  "factory_structure": {
+    "file": "workshop_1_strict_quality.json",
+    "distance_matrix": "distance_matrix_workshop_1.csv"
+  },
+  
+  "products": [
+    {"file": "variants/variant1.json", "enabled": true},
+    {"file": "variants/variant2.json", "enabled": true},
+    {"file": "variants/variant3.json", "enabled": true}
+  ],
+  
+  "product_delivery": {
+    "mode": "random"
+  },
+  
+  "overrides": {
+    "material_flow": {
+      "flow_mode": "pull"
+    },
+    "output": {
+      "core_outputs": {
+        "export_eventlog": true,
+        "export_case_table": true,
+        "export_output_table": true
+      },
+      "derived_outputs": {
+        "export_station_stats_absolute": false
+      }
+    }
+  }
+}

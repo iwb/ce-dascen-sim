@@ -1,0 +1,49 @@
+{
+  "experiment_id": "exp09_split_flow",
+  "description": "Demonstrate component splitting and specialized routing",
+  "output_prefix": "split_flow",
+  
+  "simulation": {
+    "weeks": 2,
+    "start_date": "2024-01-01T00:00:00"
+  },
+  
+  "factory_structure": {
+    "file": "split_flow_5.json",
+    "distance_matrix": "distance_matrix_split_flow_5.csv"
+  },
+  
+  "products": [
+    {"file": "variants/variant1.json", "enabled": true},
+    {"file": "variants/variant2.json", "enabled": true},
+    {"file": "variants/variant3.json", "enabled": true}
+  ],
+  
+  "product_delivery": {
+    "mode": "random"
+  },
+  
+  "overrides": {
+    "output": {
+      "core_outputs": {
+        "export_eventlog": true,
+        "export_case_table": true,
+        "export_output_table": true
+      },
+      "derived_outputs": {
+        "export_station_stats_absolute": true,
+        "export_product_time_analysis": true
+      },
+      "debug_outputs": {
+        "export_monitoring_data": true
+      }
+    },
+    "visualization": {
+      "show_structure": true
+    },
+    "display": {
+      "show_resource_utilization": true,
+      "show_logistics_performance": true
+    }
+  }
+}

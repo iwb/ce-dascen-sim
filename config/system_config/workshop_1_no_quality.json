@@ -1,0 +1,178 @@
+{
+    "factory": {
+        "global_parameters": {
+            "start_of_day": 6,
+            "end_of_day": 22,
+            "maintenance_capacity": 1
+        },
+        "stations": {
+            "ws-01_workshop_01": {
+                "preparation_time": 2,
+                "entry_capacity": 10,
+                "entry_order_threshold": 3,
+                "outbuf_to_next_capacity": 10,
+                "outbuf_to_store_capacity": 10,
+                "predecessors": [
+                    "incoming_storage"
+                ],
+                "steps": {
+                    "fluids": {
+                        "min_condition": 0.0,
+                        "equipment": {
+                            "tools": 2,
+                            "pump_system": 1
+                        },
+                        "employees": {
+                            "disassembly_worker": 1
+                        }
+                    },
+                    "battery_assembly1": {
+                        "min_condition": 0.0,
+                        "equipment": {
+                            "tools": 1,
+                            "lifting_platform": 1
+                        },
+                        "employees": {
+                            "disassembly_worker": 1
+                        }
+                    },
+                    "battery_cover": {
+                        "min_condition": 0.0,
+                        "equipment": {
+                            "tools": 1,
+                            "lifting_platform": 1
+                        },
+                        "employees": {
+                            "disassembly_worker": 1
+                        }
+                    },
+                    "battery": {
+                        "min_condition": 0.0,
+                        "equipment": {
+                            "tools": 1,
+                            "lifting_platform": 1
+                        },
+                        "employees": {
+                            "disassembly_worker": 1
+                        }
+                    },
+                    "battery_assembly2": {
+                        "min_condition": 0.0,
+                        "equipment": {
+                            "tools": 1,
+                            "lifting_platform": 1
+                        },
+                        "employees": {
+                            "disassembly_worker": 1
+                        }
+                    },
+                    "battery_module": {
+                        "min_condition": 0.0,
+                        "equipment": {
+                            "tools": 1,
+                            "lifting_platform": 1
+                        },
+                        "employees": {
+                            "disassembly_worker": 1
+                        }
+                    },
+                    "battery_frame": {
+                        "min_condition": 0.0,
+                        "equipment": {
+                            "tools": 1,
+                            "lifting_platform": 1
+                        },
+                        "employees": {
+                            "disassembly_worker": 1
+                        }
+                    },
+                    "battery_controller": {
+                        "min_condition": 0.0,
+                        "equipment": {
+                            "tools": 1,
+                            "lifting_platform": 1
+                        },
+                        "employees": {
+                            "disassembly_worker": 1
+                        }
+                    },
+                    "electrical": {
+                        "min_condition": 0.0,
+                        "equipment": {
+                            "tools": 1
+                        },
+                        "employees": {
+                            "disassembly_worker": 1
+                        }
+                    },
+                    "interior": {
+                        "min_condition": 0.0,
+                        "equipment": {
+                            "tools": 1
+                        },
+                        "employees": {
+                            "disassembly_worker": 1
+                        }
+                    },
+                    "engine": {
+                        "min_condition": 0.0,
+                        "equipment": {
+                            "tools": 1,
+                            "crane": 1
+                        },
+                        "employees": {
+                            "disassembly_worker": 1
+                        }
+                    },
+                    "frame": {
+                        "min_condition": 0.0,
+                        "equipment": {
+                            "tools": 1
+                        },
+                        "employees": {
+                            "disassembly_worker": 1
+                        }
+                    },
+                    "remainder": {
+                        "min_condition": 0.0,
+                        "equipment": {
+                            "tools": 1,
+                            "crane": 1
+                        },
+                        "employees": {
+                            "disassembly_worker": 1
+                        }
+                    }
+                },
+                "resources": {
+                    "equipment": {
+                        "tools": 3,
+                        "lifting_platform": 1,
+                        "pump_system": 1,
+                        "crane": 1
+                    },
+                    "employees": {
+                        "disassembly_worker": 1
+                    }
+                }
+            }
+        },
+        "storages": {},
+        "vehicles": {
+            "v-01_forklift": {
+                "quantity": 1,
+                "speed": 180,
+                "load_capacity": 1,
+                "loading_time": 1
+            }
+        },
+        "global_resources": {
+            "equipment": {
+                "crane": 1
+            },
+            "employees": {
+                "disassembly_worker": 3
+            }
+        }
+    }
+}

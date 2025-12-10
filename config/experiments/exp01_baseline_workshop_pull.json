@@ -1,0 +1,41 @@
+{
+  "experiment_id": "exp01_baseline_workshop_pull",
+  "description": "Baseline: single workshop, pull mode, mixed quality thresholds (compare with exp10 no-quality and exp11 strict-quality)",
+  "output_prefix": "baseline_pull_mixed",
+  
+  "simulation": {
+    "weeks": 2,
+    "start_date": "2025-01-01T00:00:00"
+  },
+  
+  "factory_structure": {
+    "file": "workshop_1.json",
+    "distance_matrix": "distance_matrix_workshop_1.csv"
+  },
+  
+  "products": [
+    {"file": "variants/variant1.json", "enabled": true},
+    {"file": "variants/variant2.json", "enabled": true},
+    {"file": "variants/variant3.json", "enabled": true}
+  ],
+  
+  "product_delivery": {
+    "mode": "random"
+  },
+  
+  "overrides": {
+    "material_flow": {
+      "flow_mode": "pull"
+    },
+    "output": {
+      "core_outputs": {
+        "export_eventlog": true,
+        "export_case_table": true,
+        "export_output_table": true
+      },
+      "derived_outputs": {
+        "export_station_stats_absolute": true
+      }
+    }
+  }
+}

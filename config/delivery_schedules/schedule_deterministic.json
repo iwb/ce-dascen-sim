@@ -1,0 +1,16 @@
+{
+  "delivery_schedule": {
+    "name": "Deterministic Test Schedule",
+    "description": "Fixed arrival times for reproducible testing",
+    "entries": [
+      {"delivery_time": 60, "product_file": "variants/variant1.json", "condition": 0.8},
+      {"delivery_time": 180, "product_file": "variants/variant2.json", "condition": 0.6},
+      {"delivery_time": 300, "product_file": "variants/variant3.json", "condition": 0.7},
+      {"delivery_time": 420, "product_file": "variants/variant1.json", "condition": 0.9},
+      {"delivery_time": 540, "product_file": "variants/variant2.json", "condition": 0.5},
+      {"delivery_time": 660, "product_file": "variants/variant3.json", "condition": 0.8},
+      {"delivery_time": 780, "product_file": "variants/variant1.json", "condition": 0.4},
+      {"delivery_time": 900, "product_file": "variants/variant2.json", "condition": 0.7}
+    ]
+  }
+}

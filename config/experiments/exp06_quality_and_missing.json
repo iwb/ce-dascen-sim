@@ -1,0 +1,38 @@
+{
+  "experiment_id": "exp06_quality_and_missing",
+  "description": "Low quality products with selective disassembly and missing components (compare with exp05 high quality baseline)",
+  "output_prefix": "scheduled_quality",
+  
+  "simulation": {
+    "weeks": 2,
+    "start_date": "2025-01-01T00:00:00"
+  },
+  
+  "factory_structure": {
+    "file": "workshop_1.json",
+    "distance_matrix": "distance_matrix_workshop_1.csv"
+  },
+  
+  "products": [
+    {"file": "variants/variant1.json", "enabled": true},
+    {"file": "variants/variant2.json", "enabled": true},
+    {"file": "variants/variant3.json", "enabled": true}
+  ],
+  
+  "product_delivery": {
+    "mode": "scheduled",
+    "schedule_file": "schedule_quality_varied.json"
+  },
+  
+  "overrides": {
+    "output": {
+      "core_outputs": {
+        "export_case_table": true,
+        "export_output_table": true
+      },
+      "derived_outputs": {
+        "export_quality_analysis": true
+      }
+    }
+  }
+}

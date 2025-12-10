@@ -1,0 +1,31 @@
+{
+  "version": "2.0",
+  "description": "Default technical parameters for simulation processes",
+  
+  "process": {
+    "MTBF_mu": 7200,
+    "MTBF_sigma": 720,
+    "MTTR_mu": 90,
+    "MTTR_sigma": 15,
+    "scale_disassembly_time": 1.3,
+    "handling_time": 0.1,
+    "preparation_time": 0.1
+  },
+  
+  "resources": {
+    "vehicle_speed": 5,
+    "vehicle_capacity": 10,
+    "maintenance_capacity": 2
+  },
+  
+  "behavior_mode": "seeded",
+  
+  "random_seeds": {
+    "supply": 42,
+    "process_times": 43,
+    "quality": 44,
+    "breakdowns": 45,
+    "transport": 46,
+    "components": 47
+  }
+}

@@ -1,0 +1,7 @@
+;ws-01_prep_01;ws-02_mixed_01;ws-03_universal_01;ws-04_backup_01;incoming_storage;outgoing_storage
+ws-01_prep_01;0;25;25;50;20;70
+ws-02_mixed_01;25;0;30;25;45;45
+ws-03_universal_01;25;30;0;25;45;45
+ws-04_backup_01;50;25;25;0;70;20
+incoming_storage;20;45;45;70;0;90
+outgoing_storage;70;45;45;20;90;0

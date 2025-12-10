@@ -1,0 +1,107 @@
+{
+  "version": "0.5",
+  "description": "Runtime configuration for output, visualization, and monitoring settings",
+  
+  "material_flow": {
+    "_description": "Controls how materials move through the system",
+    "flow_mode": "pull",
+    "_flow_mode_note": "Material flow strategy: 'pull' (stations request items) or 'push' (stations send items)",
+    "_flow_mode_values": ["pull", "push"]
+  },
+  
+  "output": {
+    "_description": "Controls which data files are exported to the output folder",
+
+    "base_output_path": "./output",
+    "_path_note": "Base directory for all simulation outputs",
+
+    "core_outputs": {
+      "_description": "Core simulation data exports (raw files)",
+
+      "export_eventlog": true,
+      "_eventlog_note": "Master event log with all activities; required for export_object_lookup",
+      "export_case_table": true,
+      "_case_table_note": "Summary table of all products entering the system",
+      "export_output_table": true,
+      "_output_table_note": "Details of all components/products leaving the system"
+    },
+    
+    "derived_outputs": {
+        "_description": "Metrics and data computed from the eventlog (comp files)",
+
+        "export_object_lookup": false,
+        "_object_lookup_note": "Object reference table derived from eventlog",
+        "export_product_time_analysis": false,
+        "_station_stats_absolute_note": "Station time metrics in minutes (busy, blocked, idle, failed, closed)",
+        "export_quality_analysis": false,
+        "_product_time_analysis_note": "Resource time consumption analysis (PT/HT/LT breakdown)",
+        "export_station_stats_absolute": false        
+      },
+
+    "parameter_extraction": {
+        "_description": "Extract configuration parameters for analysis",
+
+        "export_product_parameters": false,
+        "_product_parameters_note": "Extract product structure metrics and portfolio parameters",
+        "export_system_parameters": false,
+        "_system_parameters_note": "Extract system configuration and capacity parameters"
+    },
+
+    "debug_outputs": {
+        "_description": "Debug and diagnostic outputs",
+        
+        "export_merged_config": false,
+        "_merged_config_note": "Saves complete configuration used for run",
+        "create_debug_log": false,
+        "_debug_log_note": "Creates detailed text log of simulation decisions",
+        "time_consistency_checks": false,
+        "_time_consistency_note": "Validates station time accounting (requires station_state_tracking=true)",
+        "station_state_tracking": false,
+        "_station_tracking_note": "Tracks all station state transitions",
+        "export_monitoring_data": false,
+        "_monitoring_data_note": "---------Exports time series data (inventory, station counts)"
+    }
+  },
+
+  "visualization": {
+    "_description": "Visual outputs during/after simulation",
+  
+    "show_progress_bar": false,
+    "_progress_bar_note": "Shows real-time simulation progress in console",
+    "show_structure": false,
+    "_structure_note": "Displays factory network graph after simulation (requires matplotlib)",
+    "show_timeseries_graphs": false,
+    "_timeseries_note": "Shows inventory and throughput graphs after simulation (requires matplotlib)"
+  },
+  
+  "display": {
+    "_description": "Console output after each simulation run",
+    
+    "show_system_overview": false,
+    "_system_overview_note": "Basic run statistics (time, products processed)",
+    "show_production_metrics": false,
+    "_production_metrics_note": "Throughput rates and disassembly levels",
+    "show_resource_utilization": false,
+    "_resource_utilization_note": "Station utilization percentages",
+    "show_logistics_performance": false,
+    "_logistics_performance_note": "Vehicle utilization and transport statistics",
+    "show_technical_performance": false,
+    "_technical_performance_note": "Simulation runtime and event generation stats"
+  },
+  
+  "monitoring": {
+    "_description": "Controls data collection frequency during simulation",
+    
+    "monitoring_frequency_factor": 1000,
+    "_frequency_factor_note": "--------Divides simulation time for monitoring interval (higher = less frequent)",
+    "element_entry_monitoring_frequency": 5,
+    "_element_monitoring_note": "--------Minutes between station order checks"
+  },
+  
+  "performance": {
+    "_description": "Performance optimization settings",
+    
+    "optimize_state_machine": false,
+    "_optimize_note": "--------Uses faster state tracking without history (disables detailed state logs)"
+  }
+}

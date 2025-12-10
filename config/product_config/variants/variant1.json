@@ -1,0 +1,131 @@
+{
+    "variant": {
+        "type": "Variant1",
+        "volume_per_week_min": 10,
+        "volume_per_week_mu": 20,
+        "volume_per_week_max": 30,
+        "lot_size": 1,
+        "transport_units": 1,
+        "condition_min": 0,
+        "condition_mu": 0.5,
+        "condition_max": 0.9,
+        "structure": {
+            "fluids": {
+                "quantity": 1,
+                "blocked_by": [],
+                "time": 15,
+                "mandatory": true,
+                "transport_units": 0.5,
+                "condition_dev_min": -0.2,
+                "condition_dev_mu": 0.0,
+                "condition_dev_max": 0.2,
+                "prob_missing": 0
+            },
+            "battery_assembly1": {
+                "quantity": 1,
+                "blocked_by": [
+                    "battery_cover",
+                    "fluids"
+                ],
+                "time": 45,
+                "mandatory": false,
+                "transport_units": 1,
+                "condition_dev_min": -0.2,
+                "condition_dev_mu": 0.0,
+                "condition_dev_max": 0.2,
+                "prob_missing": 0.00,
+                "structure": {
+                    "battery_assembly2": {
+                        "quantity": 1,
+                        "blocked_by": [
+                            "battery_controller"
+                        ],
+                        "time": 15,
+                        "mandatory": false,
+                        "transport_units": 1,
+                        "condition_dev_min": -0.2,
+                        "condition_dev_mu": 0.0,
+                        "condition_dev_max": 0.2,
+                        "prob_missing": 0.00,
+                        "structure": {
+                            "battery_module": {
+                                "quantity": 10,
+                                "blocked_by": [],
+                                "time": 1,
+                                "mandatory": true,
+                                "transport_units": 0.1,
+                                "condition_dev_min": -0.2,
+                                "condition_dev_mu": 0.0,
+                                "condition_dev_max": 0.2,
+                                "prob_missing": 0.00
+                            },
+                            "battery_frame": {
+                                "quantity": 1,
+                                "blocked_by": [
+                                    "battery_module"
+                                ],
+                                "time": 20,
+                                "mandatory": false,
+                                "transport_units": 0.1,
+                                "condition_dev_min": -0.2,
+                                "condition_dev_mu": 0.0,
+                                "condition_dev_max": 0.2,
+                                "prob_missing": 0.00
+                            }
+                        }
+                    },
+                    "battery_controller": {
+                        "quantity": 1,
+                        "blocked_by": [],
+                        "time": 5,
+                        "mandatory": false,
+                        "transport_units": 0.1,
+                        "condition_dev_min": -0.2,
+                        "condition_dev_mu": 0.0,
+                        "condition_dev_max": 0.2,
+                        "prob_missing": 0.00
+                    }
+                }
+            },
+            "battery_cover": {
+                "quantity": 1,
+                "blocked_by": [
+                    "fluids"
+                ],
+                "time": 15,
+                "mandatory": false,
+                "transport_units": 0.5,
+                "condition_dev_min": -0.2,
+                "condition_dev_mu": 0.0,
+                "condition_dev_max": 0.2,
+                "prob_missing": 0.00
+            },
+            "interior": {
+                "quantity": 1,
+                "blocked_by": [
+                    "fluids"
+                ],
+                "time": 60,
+                "mandatory": false,
+                "transport_units": 1,
+                "condition_dev_min": -0.2,
+                "condition_dev_mu": 0.0,
+                "condition_dev_max": 0.2,
+                "prob_missing": 0.00
+            },
+            "remainder": {
+                "quantity": 1,
+                "blocked_by": [
+                    "fluids"
+                ],
+                "time": 120,
+                "mandatory": false,
+                "transport_units": 1,
+                "condition_dev_min": -0.2,
+                "condition_dev_mu": 0.0,
+                "condition_dev_max": 0.2,
+                "prob_missing": 0.00
+            }
+        }
+    }
+}

@@ -1,0 +1,42 @@
+{
+  "experiment_id": "exp08_linear_simple",
+  "description": "Linear flow with single disassembly station (compare with exp03 which uses 2 parallel disassembly stations - same steps, half the capacity)",
+  "output_prefix": "linear_simple",
+  
+  "simulation": {
+    "weeks": 2,
+    "start_date": "2025-01-01T00:00:00"
+  },
+  
+  "factory_structure": {
+    "file": "line_3.json",
+    "distance_matrix": "distance_matrix_line_3.csv"
+  },
+  
+  "products": [
+    {"file": "variants/variant1.json", "enabled": true},
+    {"file": "variants/variant2.json", "enabled": true},
+    {"file": "variants/variant3.json", "enabled": true}
+  ],
+  
+  "product_delivery": {
+    "mode": "random"
+  },
+  
+  "overrides": {
+    "output": {
+      "core_outputs": {
+        "export_eventlog": true,
+        "export_case_table": true,
+        "export_output_table": true
+      },
+      "derived_outputs": {
+        "export_station_stats_absolute": true
+      }
+    },
+    "display": {
+      "show_system_overview": true,
+      "show_production_metrics": true
+    }
+  }
+}

@@ -1,0 +1,31 @@
+# File: pyproject.toml
+# Location: Project root
+# Description: Python project configuration and dependencies
+# Authors: Patrick Jordan, Lasse Streibel, Julian Stang
+# 
+# Defines project metadata, dependencies, and development tools
+
+[project]
+name = "flexible-simulation-tool"
+authors = [
+    "Patrick Jordan <patrick.jordan@iwb.tum.de>",
+    "Lasse Streibel <lasse.streibel@iwb.tum.de>",
+    "Julian Stang <julian.stang@iwb.tum.de>"
+]
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "matplotlib>=3.9.2",
+    "networkx>=3.3",
+    "pandas>=2.2.3",
+    "seaborn>=0.13.2",
+    "simpy>=4.1.1",
+]
+
+[tool.uv]
+dev-dependencies = [
+    "pytest>=8.3.3",
+    "ruff>=0.6.8",
+]

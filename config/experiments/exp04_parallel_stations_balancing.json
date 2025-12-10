@@ -1,0 +1,56 @@
+{
+  "experiment_id": "exp04_parallel_stations_balancing",
+  "description": "Demonstrate workload distribution between parallel disassembly stations",
+  "output_prefix": "parallel_balance",
+  
+  "simulation": {
+    "weeks": 2,
+    "start_date": "2025-01-01T00:00:00"
+  },
+  
+  "factory_structure": {
+    "file": "line_parallel_4.json",
+    "distance_matrix": "distance_matrix_line_parallel_4.csv"
+  },
+  
+  "products": [
+    {"file": "variants/variant1.json", "enabled": true},
+    {"file": "variants/variant2.json", "enabled": true},
+    {"file": "variants/variant3.json", "enabled": true}
+  ],
+  
+  "product_delivery": {
+    "mode": "random"
+  },
+  
+  "overrides": {
+    "Variant1": {
+      "volume_per_week_min": 20,
+      "volume_per_week_mu": 30,
+      "volume_per_week_max": 40
+    },
+    "Variant2": {
+      "volume_per_week_min": 20,
+      "volume_per_week_mu": 30,
+      "volume_per_week_max": 40
+    },
+    "Variant3": {
+      "volume_per_week_min": 20,
+      "volume_per_week_mu": 30,
+      "volume_per_week_max": 40
+    },
+    "output": {
+      "core_outputs": {
+        "export_eventlog": true,
+        "export_case_table": true
+      },
+      "derived_outputs": {
+        "export_station_stats_absolute": true
+      }
+    },
+    "display": {
+      "show_resource_utilization": true,
+      "show_production_metrics": true
+    }
+  }
+}

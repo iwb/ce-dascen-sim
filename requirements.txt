@@ -1,0 +1,12 @@
+# File: requirements.txt
+# Location: Project root
+# Description: Python package dependencies
+# Authors: Patrick Jordan
+#
+# Install with: pip install -r requirements.txt
+
+matplotlib>=3.9.2
+networkx>=3.3
+pandas>=2.2.3
+seaborn>=0.13.2
+simpy>=4.1.1

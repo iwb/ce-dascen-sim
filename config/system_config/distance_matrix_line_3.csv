@@ -1,0 +1,6 @@
+;ws-01_fluids_01;ws-02_battery_01;ws-03_disassembly_01;incoming_storage;outgoing_storage
+ws-01_fluids_01;0;20;40;15;60
+ws-02_battery_01;20;0;20;35;40
+ws-03_disassembly_01;40;20;0;55;20
+incoming_storage;15;35;55;0;70
+outgoing_storage;60;40;20;70;0

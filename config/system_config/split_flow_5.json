@@ -1,0 +1,298 @@
+{
+	"factory": {
+		"global_parameters": {
+			"start_of_day": 6,
+			"end_of_day": 22,
+			"maintenance_capacity": 1
+		},
+		"stations": {
+			"ws-01_prep_01": {
+				"preparation_time": 2,
+				"entry_capacity": 10,
+				"entry_order_threshold": 3,
+				"outbuf_to_next_capacity": 10,
+				"outbuf_to_store_capacity": 10,
+				"predecessors": [
+					"incoming_storage"
+				],
+				"steps": {
+					"fluids": {
+						"min_condition": 0.0,
+						"equipment": {
+							"tools": 2,
+							"pump_system": 1
+						},
+						"employees": {
+							"disassembly_worker": 1
+						}
+					},
+					"battery_cover": {
+						"min_condition": 0.2,
+						"equipment": {
+							"tools": 1
+						},
+						"employees": {
+							"disassembly_worker": 1
+						}
+					},
+					"battery_assembly1": {
+						"min_condition": 0.3,
+						"equipment": {
+							"tools": 1,
+							"lifting_platform": 1
+						},
+						"employees": {
+							"disassembly_worker": 1
+						}
+					}
+				},
+				"resources": {
+					"equipment": {
+						"tools": 3,
+						"pump_system": 1,
+						"lifting_platform": 1
+					},
+					"employees": {
+						"disassembly_worker": 1
+					}
+				}
+			},
+			"ws-02_mixed_01": {
+				"preparation_time": 3,
+				"entry_capacity": 10,
+				"entry_order_threshold": 3,
+				"outbuf_to_next_capacity": 10,
+				"outbuf_to_store_capacity": 10,
+				"predecessors": [
+					"ws-01_prep_01"
+				],
+				"variant_routing": {
+					"ws-01_prep_01": ["Variant1", "Variant3"]
+				},
+				"steps": {
+					"electrical": {
+						"min_condition": 0.2,
+						"equipment": {
+							"tools": 1,
+							"test_equipment": 1
+						},
+						"employees": {
+							"electronics_technician": 1
+						}
+					},
+					"engine": {
+						"min_condition": 0.2,
+						"equipment": {
+							"tools": 1,
+							"crane": 1
+						},
+						"employees": {
+							"electronics_technician": 1
+						}
+					},
+					"battery_controller": {
+						"min_condition": 0.2,
+						"equipment": {
+							"tools": 1,
+							"test_equipment": 1
+						},
+						"employees": {
+							"electronics_technician": 1
+						}
+					},
+					"battery_module": {
+						"min_condition": 0.4,
+						"equipment": {
+							"tools": 1,
+							"test_equipment": 1
+						},
+						"employees": {
+							"electronics_technician": 1
+						}
+					}
+				},
+				"resources": {
+					"equipment": {
+						"tools": 1,
+						"test_equipment": 1,
+						"crane": 1
+					},
+					"employees": {
+						"electronics_technician": 1
+					}
+				}
+			},
+			"ws-03_universal_01": {
+				"preparation_time": 3,
+				"entry_capacity": 10,
+				"entry_order_threshold": 3,
+				"outbuf_to_next_capacity": 10,
+				"outbuf_to_store_capacity": 10,
+				"predecessors": [
+					"ws-02_mixed_01"
+				],
+				"variant_routing": {
+					"ws-02_mixed_01": ["Variant1", "Variant3"]
+				},
+				"steps": {
+                    "electrical": {
+                        "min_condition": 0.2,
+                        "equipment": {
+                            "tools": 1,
+                            "test_equipment": 1
+                        },
+                        "employees": {
+                            "mechanic": 1
+                        }
+                    },
+                    "engine": {
+                        "min_condition": 0.2,
+                        "equipment": {
+                            "tools": 1,
+                            "crane": 1
+                        },
+                        "employees": {
+                            "mechanic": 1
+                        }
+                    },
+					"battery_assembly2": {
+						"min_condition": 0.2,
+						"equipment": {
+							"tools": 1,
+							"lifting_platform": 1
+						},
+						"employees": {
+							"mechanic": 1
+						}
+					},
+                    "battery_module": {
+                        "min_condition": 0.4,
+                        "equipment": {
+                            "tools": 1,
+                            "lifting_platform": 1
+                        },
+                        "employees": {
+                            "mechanic": 1
+                        }
+                    },
+					"battery_frame": {
+						"min_condition": 0.2,
+						"equipment": {
+							"tools": 1,
+							"lifting_platform": 1
+						},
+						"employees": {
+							"mechanic": 1
+						}
+					},
+					"frame": {
+						"min_condition": 0.2,
+						"equipment": {
+							"tools": 1,
+							"crane": 1
+						},
+						"employees": {
+							"mechanic": 1
+						}
+					},
+                    "interior": {
+                        "min_condition": 0.2,
+                        "equipment": {
+                            "tools": 1
+                        },
+                        "employees": {
+                            "mechanic": 1
+                        }
+                    },
+                    "remainder": {
+                        "min_condition": 0.2,
+                        "equipment": {
+                            "tools": 1
+                        },
+                        "employees": {
+                            "mechanic": 1
+                        }
+				    }
+                },
+				"resources": {
+					"equipment": {
+						"tools": 1,
+						"lifting_platform": 1,
+						"crane": 1
+					},
+					"employees": {
+						"mechanic": 1
+					}
+				}
+			},
+			"ws-04_backup_01": {
+				"preparation_time": 2,
+				"entry_capacity": 15,
+				"entry_order_threshold": 5,
+				"outbuf_to_next_capacity": 10,
+				"outbuf_to_store_capacity": 10,
+				"predecessors": [
+					"ws-01_prep_01",
+					"ws-03_universal_01"
+				],
+				"variant_routing": {
+					"ws-01_prep_01": ["Variant2"],
+					"ws-03_universal_01": ["Variant1", "Variant3"]
+				},
+				"steps": {
+					"interior": {
+						"min_condition": 0.2,
+						"equipment": {
+							"tools": 1
+						},
+						"employees": {
+							"mechanic": 1
+						}
+					},
+					"remainder": {
+						"min_condition": 0.2,
+						"equipment": {
+							"tools": 1
+						},
+						"employees": {
+							"mechanic": 1
+						}
+					}
+				},
+				"resources": {
+					"equipment": {
+						"tools": 2
+					},
+					"employees": {
+						"mechanic": 1
+					}
+				}
+			}
+		},
+		"storages": {},
+		"vehicles": {
+			"v-01_forklift": {
+				"quantity": 1,
+				"speed": 180,
+				"load_capacity": 1,
+				"loading_time": 1
+			},
+			"v-02_pallet_truck": {
+				"quantity": 2,
+				"speed": 45,
+				"load_capacity": 1,
+				"loading_time": 1
+			}
+		},
+		"global_resources": {
+			"equipment": {
+				"crane": 2
+			},
+			"employees": {
+				"mechanic": 2,
+				"electronics_technician": 1,
+				"disassembly_worker": 1
+			}
+		}
+	}
+}

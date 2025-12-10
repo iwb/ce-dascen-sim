@@ -1,0 +1,5 @@
+;ws-01_workshop_01;ws-02_workshop_02;incoming_storage;outgoing_storage
+ws-01_workshop_01;0;50;20;30
+ws-02_workshop_02;50;0;20;30
+incoming_storage;20;20;0;40
+outgoing_storage;30;30;40;0

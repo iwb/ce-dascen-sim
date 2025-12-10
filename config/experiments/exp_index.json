@@ -1,0 +1,83 @@
+{
+  "version": "2.0",
+  "description": "Master index for disassembly simulation experiments",
+  "experiments": [
+    {
+      "id": "exp01_baseline_workshop_pull",
+      "name": "Baseline Workshop - Pull Mode",
+      "description": "Single workshop with pull material flow, standard quality",
+      "config_file": "exp01_baseline_workshop_pull.json",
+      "tags": ["workshop", "pull", "baseline"]
+    },
+    {
+      "id": "exp02_workshop_push_comparison",
+      "name": "Workshop - Push Mode",
+      "description": "Single workshop with push material flow for comparison",
+      "config_file": "exp02_workshop_push_comparison.json",
+      "tags": ["workshop", "push", "comparison"]
+    },
+    {
+      "id": "exp03_linear_flow_storage",
+      "name": "Linear Flow with Storage",
+      "description": "Specialized stations with intermediate storage",
+      "config_file": "exp03_linear_flow_storage.json",
+      "tags": ["linear", "storage", "parallel"]
+    },
+    {
+      "id": "exp04_parallel_stations_balancing",
+      "name": "Parallel Stations Load Balancing",
+      "description": "Parallel disassembly stations with high volume",
+      "config_file": "exp04_parallel_stations_balancing.json",
+      "tags": ["parallel", "balancing", "high-volume"]
+    },
+    {
+      "id": "exp05_scheduled_delivery_deterministic",
+      "name": "Scheduled Deterministic",
+      "description": "Fully deterministic with scheduled deliveries",
+      "config_file": "exp05_scheduled_delivery_deterministic.json",
+      "tags": ["scheduled", "deterministic", "reproducible"]
+    },
+    {
+      "id": "exp06_quality_and_missing",
+      "name": "Quality and Missing Components",
+      "description": "Demonstrate condition-based decisions and missing components",
+      "config_file": "exp06_quality_and_missing.json",
+      "tags": ["quality", "missing", "conditions"]
+    },
+    {
+      "id": "exp07_stress_test_breakdowns",
+      "name": "Stress Test with Breakdowns",
+      "description": "High stress with equipment failures",
+      "config_file": "exp07_stress_test_breakdowns.json",
+      "tags": ["stress", "breakdowns", "failures"]
+    },
+    {
+      "id": "exp08_linear_simple",
+      "name": "Simple Linear Flow",
+      "description": "Linear flow without parallel stations",
+      "config_file": "exp08_linear_simple.json",
+      "tags": ["linear", "simple", "sequential"]
+    },
+    {
+      "id": "exp09_split_flow",
+      "name": "Split Flow Demonstration",
+      "description": "Component splitting with specialized routing",
+      "config_file": "exp09_split_flow.json",
+      "tags": ["split", "routing", "specialized"]
+    },
+    {
+      "id": "exp10_baseline_workshop_pull_no_quality",
+      "name": "Baseline Workshop - Pull Mode (No Quality)",
+      "description": "Single workshop with pull material flow, no quality restrictions",
+      "config_file": "exp10_baseline_workshop_pull_no_quality.json",
+      "tags": ["workshop", "pull", "baseline", "no_quality"]
+    },
+    {
+      "id": "exp11_baseline_workshop_pull_strict_quality",
+      "name": "Baseline Workshop - Pull Mode (Strict Quality)",
+      "description": "Single workshop with pull material flow, strict quality requirements",
+      "config_file": "exp11_baseline_workshop_pull_strict_quality.json",
+      "tags": ["workshop", "pull", "baseline", "strict_quality"]
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "experiment_id": "exp07_stress_test_breakdowns",
+  "description": "Equipment reliability test with frequent breakdowns and longer repair times (compare with exp03 baseline - same volume, minimal failures)",
+  "output_prefix": "breakdown_stress",
+  
+  "simulation": {
+    "weeks": 2,
+    "start_date": "2025-01-01T00:00:00"
+  },
+  
+  "factory_structure": {
+    "file": "line_parallel_4.json",
+    "distance_matrix": "distance_matrix_line_parallel_4.csv"
+  },
+  
+  "products": [
+    {"file": "variants/variant1.json", "enabled": true},
+    {"file": "variants/variant2.json", "enabled": true},
+    {"file": "variants/variant3.json", "enabled": true}
+  ],
+  
+  "product_delivery": {
+    "mode": "random"
+  },
+  
+  "overrides": {
+    "process": {
+      "MTBF_mu": 1440,
+      "MTBF_sigma": 240,
+      "MTTR_mu": 120,
+      "MTTR_sigma": 30
+    },
+    "output": {
+      "derived_outputs": {
+        "export_station_stats_absolute": true
+      }
+    },
+    "display": {
+      "show_resource_utilization": true,
+      "show_technical_performance": true
+    }
+  }
+}

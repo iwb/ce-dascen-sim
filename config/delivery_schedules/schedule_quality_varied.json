@@ -1,0 +1,16 @@
+{
+  "delivery_schedule": {
+    "name": "Quality Variation Schedule",
+    "description": "Products with varied quality to test condition-based decisions",
+    "entries": [
+      {"delivery_time": 60, "product_file": "variants/variant1.json", "condition": 0.3},
+      {"delivery_time": 120, "product_file": "variants/variant2.json", "condition": 0.9},
+      {"delivery_time": 180, "product_file": "variants/variant3.json", "condition": 0.1},
+      {"delivery_time": 240, "product_file": "variants/variant1.json", "condition": 0.6},
+      {"delivery_time": 300, "product_file": "variants/variant2.json", "condition": 0.4},
+      {"delivery_time": 360, "product_file": "variants/variant3.json", "condition": 0.8},
+      {"delivery_time": 420, "product_file": "variants/variant1.json", "condition": 0.2},
+      {"delivery_time": 480, "product_file": "variants/variant2.json", "condition": 0.7}
+    ]
+  }
+}
