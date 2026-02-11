@@ -1,0 +1,45 @@
+{
+  "experiment_id": "exp12v_scenario_01",
+  "description": "Validation: Scenario 1 with calibrated times from experimental data",
+  "output_prefix": "scenario_01_validation",
+  "simulation": {
+    "weeks": 0.238,
+    "runs": 1,
+    "start_date": "2025-01-07T00:00:00"
+  },
+  "factory_structure": {
+    "file": "system_01.json",
+    "distance_matrix": "distance_matrix_system_01.csv"
+  },
+  "products": [
+    {"file": "scenario_01/car_rd_s01.json", "enabled": true},
+    {"file": "scenario_01/car_tl_s01.json", "enabled": true},
+    {"file": "scenario_01/car_sa_s01.json", "enabled": true}
+  ],
+  "product_delivery": {
+    "mode": "scheduled",
+    "schedule_file": "scenario_01_schedule.json"
+  },
+  "overrides": {
+    "behavior_mode": "deterministic",
+    "material_flow": {
+      "flow_mode": "push"
+    },
+    "output": {
+      "core_outputs": {
+        "export_eventlog": true,
+        "export_case_table": true,
+        "export_output_table": true
+      },
+      "derived_outputs": {
+        "export_station_stats_absolute": true,
+        "export_product_time_analysis": true,
+        "export_station_utilization": true
+      }
+    },
+    "display": {
+      "show_resource_utilization": true,
+      "show_production_metrics": true
+    }
+  }
+}

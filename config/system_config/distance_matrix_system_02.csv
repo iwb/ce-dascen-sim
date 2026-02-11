@@ -1,0 +1,7 @@
+;ws-01_S1toS8;ws-02_S1toS8;ws-03_S1toS8;ws-04_S1toS8;incoming_storage;outgoing_storage
+ws-01_S1toS8;0;150;240;282;192;120
+ws-02_S1toS8;150;0;282;240;324;120
+ws-03_S1toS8;240;282;0;150;192;120
+ws-04_S1toS8;282;240;150;0;324;120
+incoming_storage;192;324;192;324;0;312
+outgoing_storage;120;120;120;120;312;0

@@ -1,0 +1,18 @@
+{
+  "delivery_schedule": {
+    "name": "Scenario 5",
+    "description": "Mixed Quality Portfolio (HD 60%, TL 10%, SA 10%, RD 20%), Automated Processing",
+    "entries": [
+      {"delivery_time": 0.0, "product_file": "scenario_05/car_hd_s05.json", "condition": 1.0},
+      {"delivery_time": 60.0, "product_file": "scenario_05/car_tl_s05.json", "condition": 1.0},
+      {"delivery_time": 120.0, "product_file": "scenario_05/car_hd_s05.json", "condition": 1.0},
+      {"delivery_time": 180.0, "product_file": "scenario_05/car_hd_s05.json", "condition": 1.0},
+      {"delivery_time": 240.0, "product_file": "scenario_05/car_sa_s05.json", "condition": 1.0},
+      {"delivery_time": 300.0, "product_file": "scenario_05/car_rd_s05.json", "condition": 1.0},
+      {"delivery_time": 420.0, "product_file": "scenario_05/car_hd_s05.json", "condition": 1.0},
+      {"delivery_time": 420.0, "product_file": "scenario_05/car_rd_s05.json", "condition": 1.0},
+      {"delivery_time": 540.0, "product_file": "scenario_05/car_hd_s05.json", "condition": 1.0},
+      {"delivery_time": 600.0, "product_file": "scenario_05/car_hd_s05.json", "condition": 1.0}
+    ]
+  }
+}

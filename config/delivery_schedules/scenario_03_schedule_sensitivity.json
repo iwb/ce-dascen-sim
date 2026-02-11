@@ -1,0 +1,18 @@
+{
+  "delivery_schedule": {
+    "name": "Scenario 3 (Sensitivity)",
+    "description": "Sequential Heavy Damage - VUT-adjusted processing times (Hopp & Spearman, 2008, eq. 8.25)",
+    "entries": [
+      {"delivery_time": 0.0, "product_file": "scenario_03/sensitivity/car_hd_s03_sensitivity.json", "condition": 1.0},
+      {"delivery_time": 90.0, "product_file": "scenario_03/sensitivity/car_hd_s03_sensitivity.json", "condition": 1.0},
+      {"delivery_time": 180.0, "product_file": "scenario_03/sensitivity/car_hd_s03_sensitivity.json", "condition": 1.0},
+      {"delivery_time": 270.0, "product_file": "scenario_03/sensitivity/car_hd_s03_sensitivity.json", "condition": 1.0},
+      {"delivery_time": 360.0, "product_file": "scenario_03/sensitivity/car_hd_s03_sensitivity.json", "condition": 1.0},
+      {"delivery_time": 450.0, "product_file": "scenario_03/sensitivity/car_hd_s03_sensitivity.json", "condition": 1.0},
+      {"delivery_time": 600.0, "product_file": "scenario_03/sensitivity/car_hd_s03_sensitivity.json", "condition": 1.0},
+      {"delivery_time": 630.0, "product_file": "scenario_03/sensitivity/car_hd_s03_sensitivity.json", "condition": 1.0},
+      {"delivery_time": 780.0, "product_file": "scenario_03/sensitivity/car_hd_s03_sensitivity.json", "condition": 1.0},
+      {"delivery_time": 840.0, "product_file": "scenario_03/sensitivity/car_hd_s03_sensitivity.json", "condition": 1.0}
+    ]
+  }
+}

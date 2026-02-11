@@ -1,0 +1,50 @@
+{
+  "experiment_id": "exp13v_scenario_02",
+  "description": "Validation: Scenario 2 - 4WS Cell Layout, HD only, Manual, calibrated times",
+  "output_prefix": "scenario_02_validation",
+
+  "simulation": {
+    "weeks": 0.238,
+    "runs": 1,
+    "start_date": "2025-01-03T00:00:00"
+  },
+
+  "factory_structure": {
+    "file": "system_02.json",
+    "distance_matrix": "distance_matrix_system_02.csv"
+  },
+
+  "products": [
+    {"file": "scenario_02/car_hd_s02.json", "enabled": true}
+  ],
+
+  "product_delivery": {
+    "mode": "scheduled",
+    "schedule_file": "scenario_02_schedule.json"
+  },
+
+  "overrides": {
+    "behavior_mode": "deterministic",
+    "visualization": {
+      "show_timeseries_graphs": true
+    },
+    "material_flow": {
+      "flow_mode": "push"
+    },
+    "output": {
+      "core_outputs": {
+        "export_eventlog": true,
+        "export_case_table": true,
+        "export_output_table": true
+      },
+      "derived_outputs": {
+        "export_station_stats_absolute": true,
+        "export_product_time_analysis": true,
+        "export_station_utilization": true
+      },
+      "debug_outputs": {
+        "export_monitoring_data": true
+      }
+    }
+  }
+}

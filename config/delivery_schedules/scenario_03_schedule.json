@@ -1,0 +1,18 @@
+{
+  "delivery_schedule": {
+    "name": "Scenario 3",
+    "description": "Sequential Heavy Damage with Incomplete Orders, Automated Processing",
+    "entries": [
+      {"delivery_time": 0.0, "product_file": "scenario_03/car_hd_s03.json", "condition": 1.0},
+      {"delivery_time": 90.0, "product_file": "scenario_03/car_hd_s03.json", "condition": 1.0},
+      {"delivery_time": 180.0, "product_file": "scenario_03/car_hd_s03.json", "condition": 1.0},
+      {"delivery_time": 270.0, "product_file": "scenario_03/car_hd_s03.json", "condition": 1.0},
+      {"delivery_time": 360.0, "product_file": "scenario_03/car_hd_s03.json", "condition": 1.0},
+      {"delivery_time": 450.0, "product_file": "scenario_03/car_hd_s03.json", "condition": 1.0},
+      {"delivery_time": 600.0, "product_file": "scenario_03/car_hd_s03.json", "condition": 1.0},
+      {"delivery_time": 630.0, "product_file": "scenario_03/car_hd_s03.json", "condition": 1.0},
+      {"delivery_time": 780.0, "product_file": "scenario_03/car_hd_s03.json", "condition": 1.0},
+      {"delivery_time": 840.0, "product_file": "scenario_03/car_hd_s03.json", "condition": 1.0}
+    ]
+  }
+}

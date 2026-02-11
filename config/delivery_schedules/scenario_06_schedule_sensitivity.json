@@ -1,0 +1,18 @@
+{
+  "delivery_schedule": {
+    "name": "Scenario 6 (Sensitivity)",
+    "description": "Multi-Quality Routing - WS-02 load calibrated to match real throughput",
+    "entries": [
+      {"delivery_time": 0.0, "product_file": "scenario_06/sensitivity/car_sa_s06_sensitivity.json", "condition": 1.0},
+      {"delivery_time": 90.0, "product_file": "scenario_06/sensitivity/car_rd_s06_sensitivity.json", "condition": 1.0},
+      {"delivery_time": 180.0, "product_file": "scenario_06/sensitivity/car_hd_s06_sensitivity.json", "condition": 1.0},
+      {"delivery_time": 270.0, "product_file": "scenario_06/sensitivity/car_tl_s06_sensitivity.json", "condition": 1.0},
+      {"delivery_time": 360.0, "product_file": "scenario_06/sensitivity/car_sa_s06_sensitivity.json", "condition": 1.0},
+      {"delivery_time": 450.0, "product_file": "scenario_06/sensitivity/car_hd_s06_sensitivity.json", "condition": 1.0},
+      {"delivery_time": 540.0, "product_file": "scenario_06/sensitivity/car_rd_s06_sensitivity.json", "condition": 1.0},
+      {"delivery_time": 630.0, "product_file": "scenario_06/sensitivity/car_hd_s06_sensitivity.json", "condition": 1.0},
+      {"delivery_time": 720.0, "product_file": "scenario_06/sensitivity/car_rd_s06_sensitivity.json", "condition": 1.0},
+      {"delivery_time": 810.0, "product_file": "scenario_06/sensitivity/car_sa_s06_sensitivity.json", "condition": 1.0}
+    ]
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "experiment_id": "exp14_scenario_03_sensitivity",
+  "description": "Validation: scenario 03 with variability-adjusted times (VT × (1 + CV²))",
+  "output_prefix": "scenario_03_sensitivity",
+  "simulation": {
+    "weeks": 0.238,
+    "runs": 1,
+    "start_date": "2025-01-13T00:00:00"
+  },
+  "factory_structure": {
+    "file": "system_03.json",
+    "distance_matrix": "distance_matrix_system_03.csv"
+  },
+  "products": [
+    {
+      "file": "scenario_03/sensitivity/car_hd_s03_sensitivity.json",
+      "enabled": true
+    }
+  ],
+  "product_delivery": {
+    "mode": "scheduled",
+    "schedule_file": "scenario_03_schedule.json"
+  },
+  "overrides": {
+    "behavior_mode": "deterministic",
+    "material_flow": {
+      "flow_mode": "push"
+    },
+    "output": {
+      "core_outputs": {
+        "export_eventlog": true,
+        "export_case_table": true,
+        "export_output_table": true
+      },
+      "derived_outputs": {
+        "export_station_stats_absolute": true,
+        "export_product_time_analysis": true,
+        "export_station_utilization": true
+      }
+    },
+    "display": {
+      "show_resource_utilization": true,
+      "show_production_metrics": true
+    }
+  }
+}

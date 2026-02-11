@@ -1,0 +1,188 @@
+{
+  "factory": {
+    "global_parameters": {
+      "start_of_day": 0,
+      "end_of_day": 24,
+      "maintenance_capacity": 1
+    },
+    "stations": {
+      "ws-01_S1S2": {
+        "preparation_time": 0.1,
+        "entry_capacity": 10,
+        "entry_order_threshold": 3,
+        "outbuf_to_next_capacity": 10,
+        "outbuf_to_store_capacity": 10,
+        "predecessors": ["incoming_storage"],
+        "variant_routing": {
+          "incoming_storage": ["car_hd", "car_tl", "car_rd"]
+        },
+        "steps": {
+          "BOSP": {
+            "min_condition": 0.0,
+            "equipment": {"screwdriver": 1},
+            "employees": {"disassembly_worker": 1}
+          },
+          "BAT": {
+            "min_condition": 0.0,
+            "equipment": {"screwdriver": 1},
+            "employees": {"disassembly_worker": 1}
+          }
+        },
+        "resources": {
+          "equipment": {"screwdriver": 1},
+          "employees": {"disassembly_worker": 1}
+        }
+      },
+      "ws-02_S3S4": {
+        "preparation_time": 0.1,
+        "entry_capacity": 10,
+        "entry_order_threshold": 3,
+        "outbuf_to_next_capacity": 10,
+        "outbuf_to_store_capacity": 10,
+        "predecessors": ["ws-01_S1S2", "incoming_storage"],
+        "variant_routing": {
+          "ws-01_S1S2": ["car_hd", "car_tl", "car_rd"],
+          "incoming_storage": ["car_sa"]
+        },
+        "steps": {
+          "RT": {
+            "min_condition": 0.0,
+            "equipment": {"screwdriver": 1},
+            "employees": {"disassembly_worker": 1}
+          },
+          "FT": {
+            "min_condition": 0.0,
+            "equipment": {"screwdriver": 1},
+            "employees": {"disassembly_worker": 1}
+          },
+          "CRE": {
+            "min_condition": 0.0,
+            "equipment": {"screwdriver": 1},
+            "employees": {"disassembly_worker": 1}
+          }
+        },
+        "resources": {
+          "equipment": {"screwdriver": 1},
+          "employees": {"disassembly_worker": 1}
+        }
+      },
+      "ws-03_S5": {
+        "preparation_time": 0.1,
+        "entry_capacity": 10,
+        "entry_order_threshold": 3,
+        "outbuf_to_next_capacity": 10,
+        "outbuf_to_store_capacity": 10,
+        "predecessors": ["ws-02_S3S4"],
+        "variant_routing": {
+          "ws-02_S3S4": ["car_hd"]
+        },
+        "steps": {
+          "FRONT_AXIS_GROUP": {
+            "min_condition": 0.0,
+            "equipment": {"screwdriver": 1},
+            "employees": {"disassembly_worker": 1}
+          },
+          "REAR_AXIS_GROUP": {
+            "min_condition": 0.0,
+            "equipment": {"screwdriver": 1},
+            "employees": {"disassembly_worker": 1}
+          }
+        },
+        "resources": {
+          "equipment": {"screwdriver": 1},
+          "employees": {"disassembly_worker": 1}
+        }
+      },
+      "ws-04_S7": {
+        "preparation_time": 0.1,
+        "entry_capacity": 10,
+        "entry_order_threshold": 3,
+        "outbuf_to_next_capacity": 10,
+        "outbuf_to_store_capacity": 10,
+        "predecessors": ["ws-03_S5", "ws-02_S3S4"],
+        "variant_routing": {
+          "ws-03_S5": ["car_hd_REAR_AXIS_GROUP"],
+          "ws-02_S3S4": ["car_rd"]
+        },
+        "steps": {
+          "CHS": {
+            "min_condition": 0.0,
+            "equipment": {"screwdriver": 1},
+            "employees": {"disassembly_worker": 1}
+          },
+          "CORE": {
+            "min_condition": 0.0,
+            "equipment": {"screwdriver": 1},
+            "employees": {"disassembly_worker": 1}
+          }
+        },
+        "resources": {
+          "equipment": {"screwdriver": 1},
+          "employees": {"disassembly_worker": 1}
+        }
+      },
+      "ws-05_S6S8": {
+        "preparation_time": 0.1,
+        "entry_capacity": 10,
+        "entry_order_threshold": 3,
+        "outbuf_to_next_capacity": 10,
+        "outbuf_to_store_capacity": 10,
+        "predecessors": ["ws-03_S5", "ws-04_S7", "ws-02_S3S4"],
+        "variant_routing": {
+          "ws-03_S5": ["car_hd_FRONT_AXIS_GROUP"],
+          "ws-04_S7": ["car_hd_REAR_AXIS_GROUP", "car_rd"],
+          "ws-02_S3S4": ["car_sa"]
+        },
+        "steps": {
+          "SSA": {
+            "min_condition": 0.0,
+            "equipment": {"screwdriver": 1},
+            "employees": {"disassembly_worker": 1}
+          },
+          "FAX": {
+            "min_condition": 0.0,
+            "equipment": {"screwdriver": 1},
+            "employees": {"disassembly_worker": 1}
+          },
+          "BSA": {
+            "min_condition": 0.0,
+            "equipment": {"screwdriver": 1},
+            "employees": {"disassembly_worker": 1}
+          },
+          "RAX_HD": {
+            "min_condition": 0.0,
+            "equipment": {"screwdriver": 1},
+            "employees": {"disassembly_worker": 1}
+          },
+          "RAX_RD": {
+            "min_condition": 0.0,
+            "equipment": {"screwdriver": 1},
+            "employees": {"disassembly_worker": 1}
+          },
+          "CSEB-NABS": {
+            "min_condition": 0.0,
+            "equipment": {"screwdriver": 1},
+            "employees": {"disassembly_worker": 1}
+          }
+        },
+        "resources": {
+          "equipment": {"screwdriver": 1},
+          "employees": {"disassembly_worker": 1}
+        }
+      }
+    },
+    "storages": {},
+    "vehicles": {
+      "logistics_resource": {
+        "quantity": 1,
+        "speed": 180,
+        "load_capacity": 1,
+        "loading_time": 0.1
+      }
+    },
+    "global_resources": {
+      "equipment": {},
+      "employees": {}
+    }
+  }
+}

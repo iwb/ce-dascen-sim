@@ -1,5 +1,5 @@
 {
-  "version": "2.0",
+  "version": "3.0",
   "description": "Master index for disassembly simulation experiments",
   "experiments": [
     {
@@ -78,6 +78,62 @@
       "description": "Single workshop with pull material flow, strict quality requirements",
       "config_file": "exp11_baseline_workshop_pull_strict_quality.json",
       "tags": ["workshop", "pull", "baseline", "strict_quality"]
+    },
+    {
+      "id": "exp12_scenario_01",
+      "name": "Validation Scenario 01",
+      "description": "3 stations, mixed quality (RD/TL/SA), sequential flow - calibrated with S1 data",
+      "config_file": "exp12_scenario_01.json",
+      "tags": ["validation", "calibrated", "3_stations", "sequential", "mixed_quality"]
+    },
+    {
+      "id": "exp13_scenario_02",
+      "name": "Validation Scenario 02",
+      "description": "4 parallel stations, HD only, parallel processing - calibrated with S2 data",
+      "config_file": "exp13_scenario_02.json",
+      "tags": ["validation", "calibrated", "4_stations", "parallel", "hd_only"]
+    },
+    {
+      "id": "exp14_scenario_03",
+      "name": "Validation Scenario 03",
+      "description": "5 sequential stations, HD only - calibrated with S3 data",
+      "config_file": "exp14_scenario_03.json",
+      "tags": ["validation", "calibrated", "5_stations", "sequential", "hd_only"]
+    },
+    {
+      "id": "exp14_scenario_03_sensitivity",
+      "name": "Validation Scenario 03 (Sensitivity)",
+      "description": "5 sequential stations, HD only - VUT-based queue delay adjustment (Hopp & Spearman, 2008, eq. 8.25)",
+      "config_file": "exp14_scenario_03_sensitivity.json",
+      "tags": ["validation", "sensitivity", "5_stations", "sequential", "hd_only", "vut_adjusted"]
+    },
+    {
+      "id": "exp15_scenario_04",
+      "name": "Validation Scenario 04",
+      "description": "5 stations with buffer, HD only - calibrated with S4 data",
+      "config_file": "exp15_scenario_04.json",
+      "tags": ["validation", "calibrated", "5_stations", "buffer", "hd_only"]
+    },
+    {
+      "id": "exp16_scenario_05",
+      "name": "Validation Scenario 05",
+      "description": "5 stations, mixed quality - calibrated with S5 data",
+      "config_file": "exp16_scenario_05.json",
+      "tags": ["validation", "calibrated", "5_stations", "mixed_quality"]
+    },
+    {
+      "id": "exp17_scenario_06",
+      "name": "Validation Scenario 06",
+      "description": "5 stations, mixed quality routing (SA/RD/HD/TL) - calibrated with S6 data",
+      "config_file": "exp17_scenario_06.json",
+      "tags": ["validation", "calibrated", "5_stations", "variant_routing", "mixed_quality"]
+    },
+    {
+      "id": "exp17_scenario_06_sensitivity",
+      "name": "Validation Scenario 06 (Sensitivity)",
+      "description": "5 stations, mixed quality - WS-02 load calibrated to match real throughput (RT/FT reduced 20%)",
+      "config_file": "exp17_scenario_06_sensitivity.json",
+      "tags": ["validation", "sensitivity", "5_stations", "variant_routing", "mixed_quality", "bottleneck_calibrated"]
     }
   ]
 }

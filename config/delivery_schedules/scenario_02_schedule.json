@@ -1,0 +1,18 @@
+{
+  "delivery_schedule": {
+    "name": "Scenario 2",
+    "description": "Heavy Damage Processing with Parallel Stations, Manual Processing",
+    "entries": [
+      {"delivery_time": 0.0, "product_file": "scenario_02/car_hd_s02.json", "condition": 1.0},
+      {"delivery_time": 60.0, "product_file": "scenario_02/car_hd_s02.json", "condition": 1.0},
+      {"delivery_time": 120.0, "product_file": "scenario_02/car_hd_s02.json", "condition": 1.0},
+      {"delivery_time": 180.0, "product_file": "scenario_02/car_hd_s02.json", "condition": 1.0},
+      {"delivery_time": 240.0, "product_file": "scenario_02/car_hd_s02.json", "condition": 1.0},
+      {"delivery_time": 300.0, "product_file": "scenario_02/car_hd_s02.json", "condition": 1.0},
+      {"delivery_time": 390.0, "product_file": "scenario_02/car_hd_s02.json", "condition": 1.0},
+      {"delivery_time": 435.0, "product_file": "scenario_02/car_hd_s02.json", "condition": 1.0},
+      {"delivery_time": 480.0, "product_file": "scenario_02/car_hd_s02.json", "condition": 1.0},
+      {"delivery_time": 540.0, "product_file": "scenario_02/car_hd_s02.json", "condition": 1.0}
+    ]
+  }
+}

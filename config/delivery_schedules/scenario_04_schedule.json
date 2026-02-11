@@ -1,0 +1,18 @@
+{
+  "delivery_schedule": {
+    "name": "Scenario 4",
+    "description": "Mixed Quality with Buffer Station, Manual Processing",
+    "entries": [
+      {"delivery_time": 0.0, "product_file": "scenario_04/car_hd_s04.json", "condition": 1.0},
+      {"delivery_time": 90.0, "product_file": "scenario_04/car_hd_s04.json", "condition": 1.0},
+      {"delivery_time": 180.0, "product_file": "scenario_04/car_hd_s04.json", "condition": 1.0},
+      {"delivery_time": 270.0, "product_file": "scenario_04/car_hd_s04.json", "condition": 1.0},
+      {"delivery_time": 360.0, "product_file": "scenario_04/car_hd_s04.json", "condition": 1.0},
+      {"delivery_time": 450.0, "product_file": "scenario_04/car_hd_s04.json", "condition": 1.0},
+      {"delivery_time": 600.0, "product_file": "scenario_04/car_hd_s04.json", "condition": 1.0},
+      {"delivery_time": 810.0, "product_file": "scenario_04/car_hd_s04.json", "condition": 1.0},
+      {"delivery_time": 930.0, "product_file": "scenario_04/car_hd_s04.json", "condition": 1.0},
+      {"delivery_time": 1200.0, "product_file": "scenario_04/car_hd_s04.json", "condition": 1.0}
+    ]
+  }
+}

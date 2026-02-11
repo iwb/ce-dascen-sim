@@ -1,0 +1,18 @@
+{
+  "delivery_schedule": {
+    "name": "Scenario 1",
+    "description": "3 Workstations, Mixed Quality (RD/TL/SA), Linear Flow, Automated Processing",
+    "entries": [
+      {"delivery_time": 0.0, "product_file": "scenario_01/car_rd_s01.json", "condition": 1.0},
+      {"delivery_time": 120.0, "product_file": "scenario_01/car_rd_s01.json", "condition": 1.0},
+      {"delivery_time": 240.0, "product_file": "scenario_01/car_rd_s01.json", "condition": 1.0},
+      {"delivery_time": 360.0, "product_file": "scenario_01/car_tl_s01.json", "condition": 1.0},
+      {"delivery_time": 540.0, "product_file": "scenario_01/car_sa_s01.json", "condition": 1.0},
+      {"delivery_time": 600.0, "product_file": "scenario_01/car_rd_s01.json", "condition": 1.0},
+      {"delivery_time": 720.0, "product_file": "scenario_01/car_rd_s01.json", "condition": 1.0},
+      {"delivery_time": 870.0, "product_file": "scenario_01/car_tl_s01.json", "condition": 1.0},
+      {"delivery_time": 1110.0, "product_file": "scenario_01/car_rd_s01.json", "condition": 1.0},
+      {"delivery_time": 1800.0, "product_file": "scenario_01/car_sa_s01.json", "condition": 1.0}
+    ]
+  }
+}

@@ -1,0 +1,6 @@
+;ws-03_S1toS4;ws-04_S5S7;ws-05_S6S8;incoming_storage;outgoing_storage
+ws-03_S1toS4;0;150;300;192;120
+ws-04_S5S7;150;0;150;324;120
+ws-05_S6S8;300;150;0;468;120
+incoming_storage;192;324;468;0;312
+outgoing_storage;120;120;120;312;0

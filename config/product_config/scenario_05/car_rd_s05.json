@@ -1,0 +1,78 @@
+{
+  "variant": {
+    "type": "car_rd",
+    "volume_per_week_min": 0,
+    "volume_per_week_mu": 5,
+    "volume_per_week_max": 10,
+    "lot_size": 1,
+    "transport_units": 1,
+    "condition_min": 1.0,
+    "condition_mu": 1.0,
+    "condition_max": 1.0,
+    "structure": {
+      "BOSP": {
+        "quantity": 2,
+        "blocked_by": [],
+        "time": 60.5,
+        "mandatory": true,
+        "transport_units": 1,
+        "condition_dev_min": 0.0,
+        "condition_dev_mu": 0.0,
+        "condition_dev_max": 0.0,
+        "prob_missing": 0
+      },
+      "RT": {
+        "quantity": 2,
+        "blocked_by": [
+          "BOSP"
+        ],
+        "time": 46,
+        "mandatory": true,
+        "transport_units": 1,
+        "condition_dev_min": 0.0,
+        "condition_dev_mu": 0.0,
+        "condition_dev_max": 0.0,
+        "prob_missing": 0
+      },
+      "CORE": {
+        "quantity": 1,
+        "blocked_by": [
+          "RT"
+        ],
+        "time": 189,
+        "mandatory": true,
+        "transport_units": 1,
+        "condition_dev_min": 0.0,
+        "condition_dev_mu": 0.0,
+        "condition_dev_max": 0.0,
+        "prob_missing": 0
+      },
+      "BSA": {
+        "quantity": 2,
+        "blocked_by": [
+          "CORE"
+        ],
+        "time": 57,
+        "mandatory": true,
+        "transport_units": 1,
+        "condition_dev_min": 0.0,
+        "condition_dev_mu": 0.0,
+        "condition_dev_max": 0.0,
+        "prob_missing": 0
+      },
+      "RAX_RD": {
+        "quantity": 1,
+        "blocked_by": [
+          "BSA"
+        ],
+        "time": 0.1,
+        "mandatory": true,
+        "transport_units": 1,
+        "condition_dev_min": 0.0,
+        "condition_dev_mu": 0.0,
+        "condition_dev_max": 0.0,
+        "prob_missing": 0
+      }
+    }
+  }
+}
