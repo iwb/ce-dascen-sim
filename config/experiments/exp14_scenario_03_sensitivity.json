@@ -19,7 +19,7 @@
   ],
   "product_delivery": {
     "mode": "scheduled",
-    "schedule_file": "scenario_03_schedule.json"
+    "schedule_file": "scenario_03_schedule_sensitivity.json"
   },
   "overrides": {
     "behavior_mode": "deterministic",
