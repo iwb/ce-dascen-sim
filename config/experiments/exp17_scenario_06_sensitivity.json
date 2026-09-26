@@ -25,7 +25,7 @@
       "enabled": true
     },
     {
-      "file": "scenario_06/sensitivity/car_sa_s06_sensitivity.json",
+      "file": "scenario_06/sensitivity/car_sa_s06_sensitivity_schedule.json",
       "enabled": true
     }
   ],
