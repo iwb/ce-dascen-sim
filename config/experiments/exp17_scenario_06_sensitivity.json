@@ -25,13 +25,13 @@
       "enabled": true
     },
     {
-      "file": "scenario_06/sensitivity/car_sa_s06_sensitivity_schedule.json",
+      "file": "scenario_06/sensitivity/car_sa_s06_sensitivity.json",
       "enabled": true
     }
   ],
   "product_delivery": {
     "mode": "scheduled",
-    "schedule_file": "scenario_06_schedule.json"
+    "schedule_file": "scenario_06_schedule_sensitivity.json"
   },
   "overrides": {
     "behavior_mode": "deterministic",
