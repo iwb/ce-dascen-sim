@@ -219,7 +219,7 @@ The verification experiments confirmed the successful implementation of the core
 
 To validate the framework against real-world data, six validation experiments were conducted using experimental data collected in the Smart Production Lab (SPL) at the Institute for Machine Tools and Industrial Management (*iwb*) at the Technical University of Munich (https://iwb-spl.de/). The configurations are based on remotely controlled (RC) cars with measured disassembly times and various real system layouts, as well as actual delivery schedules. The RC cars are classified into four quality types: Hail Damage (HD), Rear Damage (RD), Shock Absorber Damage (SA), and Total Loss (TL) represent varying degrees of required disassembly. The experiments tested two automation levels: manual disassembly and automated disassembly, with operators receiving assistance from tools. Each validation scenario was executed for 40 simulated hours (0.238 weeks ≈ 2400 minutes) with a continuous operation to match the 40-minute real experiments. A 60x time scaling factor was applied, representing real-world seconds as simulation minutes, enabling the direct comparison between the simulated and collected datasets. All scenarios were executed in deterministic mode with push material flow to reflect the conducted experiment setup in the SPL. The actual experiments did not experience any machine downtime, although various process variations (e.g., difficulty removing components) did occur. These variations are reflected in the measured fluctuations in process time.
 
-For detailed information about the validation data, system layouts, process times, and real-world results, please refer to the associated repository, available at: [ce-dascen-lf-dataset](https://github.com/iwb/ce-dascen-lf-data)
+For detailed information about the validation data, system layouts, process times, and real-world results, please refer to the associated repository, available at: [ce-dascen-lf-data](https://github.com/iwb/ce-dascen-lf-data)
 
 <br>
 
@@ -242,15 +242,15 @@ For detailed information about the validation data, system layouts, process time
       <td>Scenario 01 validation</td>
       <td>3 stations (line)</td>
       <td>10 RC cars (mixed: 6RD/2TL/2SA)</td>
-      <td>Manual</td>
+      <td>Automated</td>
       <td><code>exp12_scenario_01.json</code></td>
     </tr>
     <tr>
       <td><strong>exp13</strong></td>
       <td>Scenario 02 validation</td>
-      <td>4 stations (parallel)</td>
+      <td>4 stations (workshop)</td>
       <td>10 RC cars (HD only)</td>
-      <td>Automated</td>
+      <td>Manual</td>
       <td><code>exp13_scenario_02.json</code></td>
     </tr>
     <tr>

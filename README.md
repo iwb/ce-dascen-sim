@@ -149,7 +149,7 @@ Table 1.2 provides an overview of the related research work and repositories tha
     <tr>
       <td>Learning factory dataset</td>
       <td>Provides empirical disassembly data collected from a physical demonstrator at TU Munich, used for the validation of the simulation model</td>
-      <td><a href="https://github.com/iwb/ce-dascen-lf-data">ce-dascen-lf-dataset</a></td>
+      <td><a href="https://github.com/iwb/ce-dascen-lf-data">ce-dascen-lf-data</a></td>
       <td><a href="https://doi.org/10.1016/j.procir.2025.03.040">Jordan et al. (2025b)</a><sup>‡</sup></td>
     </tr>
     <tr>
@@ -340,7 +340,7 @@ Feature and capability verification tests (11 experiments):
 - `exp06`, `exp10`, `exp11`: Quality management with condition-based routing
 
 ### 5.2 Validation Experiments (exp12-exp17)
-Validation experiments based on the gathered data set in a learning factory (see [ce-disassembly-lf-dataset](https://github.com/iwb/ce-disassembly-lf-dataset)):
+Validation experiments based on the gathered data set in a learning factory (see [ce-dascen-lf-data](https://github.com/iwb/ce-dascen-lf-data)):
 
 > **⚠️ Note:** The documentation of the validation experiments is being revised. As a result, these experiments are not currently available and have been removed from the configuration.
 
@@ -468,7 +468,7 @@ Jordan, P., Piendl, D., Kroeger, S., Streibel, L., Haider, C., Zaeh, M.F. (2025)
 Jordan, P., Zhang, H., Wegmann, M., Streibel, L., Reuter, C. and Zaeh, M.F. (2025) Simulation Framework For Evaluating Pool Sequencing And Shop Floor Dispatching Rules In Disassembly. 2025 IEEE International Conference on Industrial Engineering and Engineering Management (IEEM), Melbourne, Australia, 2025, pp. 0073-0080, https://doi.org/10.1109/IEEM63636.2025.11357707
 
 #### Jordan et al. 2026
-Jordan, P., Reichert, D., Schwartz, P. Piendl, D., Wegmann, M., Stang, J., Streibel, L., Kroeger, S.,Reuter, C. and Zaeh, M.F. (2025). Data-driven decision-making framework for evaluating disassembly scenarios in tactical planning. Procedia CIRP, 146, 415–420. https://doi.org/10.1016/j.procir.2026.03.264
+Jordan, P., Reichert, D., Schwartz, P., Piendl, D., Wegmann, M., Stang, J., Streibel, L., Kroeger, S., Reuter, C. and Zaeh, M.F. (2026). Data-driven decision-making framework for evaluating disassembly scenarios in tactical planning. Procedia CIRP, 146, 415–420. https://doi.org/10.1016/j.procir.2026.03.264
 
 
 ---
