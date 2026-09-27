@@ -144,19 +144,19 @@ Table 1.2 provides an overview of the related research work and repositories tha
       <td>Simulation model</td>
       <td>Generates synthetic event data for disassembly scenarios, enabling the exploration of different system configurations and product portfolios</td>
       <td>(this repository)</td>
-      <td>TBA<sup>†</sup></td>
+      <td></td>
     </tr>
     <tr>
       <td>Learning factory dataset</td>
       <td>Provides empirical disassembly data collected from a physical demonstrator at TU Munich, used for the validation of the simulation model</td>
-      <td><a href="https://github.com/iwb/ce-disassembly-lf-dataset">ce-disassembly-lf-dataset</a></td>
+      <td><a href="https://github.com/iwb/ce-dascen-lf-data">ce-dascen-lf-dataset</a></td>
       <td><a href="https://doi.org/10.1016/j.procir.2025.03.040">Jordan et al. (2025b)</a><sup>‡</sup></td>
     </tr>
     <tr>
       <td>Data analysis</td>
       <td>Analyzes the simulation output data to evaluate economic and ecological performance of disassembly scenarios using process mining techniques</td>
       <td><a href="https://github.com/iwb/ce-dascen-analysis">ce-dascen-analysis</a></td>
-      <td>TBA<sup>†</sup></td>
+      <td><a href="https://doi.org/10.1016/j.procir.2026.03.264">Jordan et al. (2026)</a></td>
     </tr>
     <tr>
       <td>Indicator selection tool</td>
@@ -174,12 +174,12 @@ Table 1.2 provides an overview of the related research work and repositories tha
       <td>Control strategy simulation</td>
       <td>Compares advanced material flow control strategies (beyond basic push/pull) in simplified disassembly systems and provides insights into appropriate simulation model adjustments/extensions related to material flow logic</td>
       <td><a href="https://github.com/iwb/ce-damfc-simulation">ce-damfc-simulation</a></td>
-      <td>TBA<sup>†</sup></td>
+      <td><a href="https://doi.org/10.1109/IEEM63636.2025.11357707">Jordan et al. (2025e)</a></td>
     </tr>
   </tbody>
 </table>
 
-> **⚠️ Note:** <sup>†</sup> Details will be updated after publication. <sup>‡</sup> The demonstrator described in this publication was used to gather the dataset.
+> **⚠️ Note:** <sup>‡</sup> The demonstrator described in this publication was used to gather the dataset.
 
 <br>
 
@@ -187,7 +187,7 @@ Table 1.2 provides an overview of the related research work and repositories tha
 
 This discrete-event simulation framework is motivated by the work of [Jordan et al. (2024)](#jordan-et-al-2024) and developed to support the data-driven decision-making in tactical disassembly planning. The simulation model enables the exploration of different disassembly scenarios by generating synthetic data for various combinations of disassembly systems and product portfolios, with varying disassembly depths.
 
-The tool was designed in parallel to the development of a physical demonstrator that enables the gathering of data about various disassembly scenarios in a learning factory. To get more information about the demonstrator, please refer to [Jordan et al. (2024)](#jordan-et-al-2024). The gathered validation dataset, using this demonstrator, is available at: [ce-disassembly-lf-dataset](https://github.com/iwb/ce-disassembly-lf-dataset).
+The tool was designed in parallel to the development of a physical demonstrator that enables the gathering of data about various disassembly scenarios in a learning factory. To get more information about the demonstrator, please refer to [Jordan et al. (2024)](#jordan-et-al-2024). The gathered validation dataset, using this demonstrator, is available at: [ce-dascen-lf-data](https://github.com/iwb/ce-dascen-lf-data).
 
 
 The simulation can be used to create a data basis for the comparison of disassembly decisions related to:
@@ -462,6 +462,13 @@ Jordan, P., Keil, S., Schneider, D., Streibel, L., Vernim, S., Zaeh, M.F. (2025)
 
 #### Jordan et al. 2025d
 Jordan, P., Piendl, D., Kroeger, S., Streibel, L., Haider, C., Zaeh, M.F. (2025). Enabling the material flow analysis in disassembly systems using object-centric process mining. Procedia CIRP, 134, 271–276. https://doi.org/10.1016/j.procir.2025.03.019
+
+
+#### Jordan et al. 2025e
+Jordan, P., Zhang, H., Wegmann, M., Streibel, L., Reuter, C. and Zaeh, M.F. (2025) Simulation Framework For Evaluating Pool Sequencing And Shop Floor Dispatching Rules In Disassembly. 2025 IEEE International Conference on Industrial Engineering and Engineering Management (IEEM), Melbourne, Australia, 2025, pp. 0073-0080, https://doi.org/10.1109/IEEM63636.2025.11357707
+
+#### Jordan et al. 2026
+Jordan, P., Reichert, D., Schwartz, P. Piendl, D., Wegmann, M., Stang, J., Streibel, L., Kroeger, S.,Reuter, C. and Zaeh, M.F. (2025). Data-driven decision-making framework for evaluating disassembly scenarios in tactical planning. Procedia CIRP, 146, 415–420. https://doi.org/10.1016/j.procir.2026.03.264
 
 
 ---

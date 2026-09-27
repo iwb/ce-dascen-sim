@@ -9,9 +9,6 @@ This document provides an overview of the 17 experiments included in the disasse
 
 - [1. Verification Experiments (exp01-11)](#1-verification-experiments-exp01-11)
 - [2. Validation Experiments (exp12-17)](#2-validation-experiments-exp12-17)
-  - [2.1 Validation Methodology](#21-validation-methodology)
-  - [2.2 Experiment Configurations](#22-experiment-configurations)
-  - [2.3 Validation Results](#23-validation-results)
 - [3. Detailed Results - Lead Times](#3-detailed-results---lead-times)
 - [4. Detailed Results - Station Statistics](#4-detailed-results---station-statistics)
 - [5. Detailed Results - Component Counts](#5-detailed-results---component-counts)
@@ -222,7 +219,7 @@ The verification experiments confirmed the successful implementation of the core
 
 To validate the framework against real-world data, six validation experiments were conducted using experimental data collected in the Smart Production Lab (SPL) at the Institute for Machine Tools and Industrial Management (*iwb*) at the Technical University of Munich (https://iwb-spl.de/). The configurations are based on remotely controlled (RC) cars with measured disassembly times and various real system layouts, as well as actual delivery schedules. The RC cars are classified into four quality types: Hail Damage (HD), Rear Damage (RD), Shock Absorber Damage (SA), and Total Loss (TL) represent varying degrees of required disassembly. The experiments tested two automation levels: manual disassembly and automated disassembly, with operators receiving assistance from tools. Each validation scenario was executed for 40 simulated hours (0.238 weeks ≈ 2400 minutes) with a continuous operation to match the 40-minute real experiments. A 60x time scaling factor was applied, representing real-world seconds as simulation minutes, enabling the direct comparison between the simulated and collected datasets. All scenarios were executed in deterministic mode with push material flow to reflect the conducted experiment setup in the SPL. The actual experiments did not experience any machine downtime, although various process variations (e.g., difficulty removing components) did occur. These variations are reflected in the measured fluctuations in process time.
 
-For detailed information about the validation data, system layouts, process times, and real-world results, please refer to the associated repository, available at: [ce-disassembly-lf-dataset](https://github.com/iwb/ce-disassembly-lf-dataset)
+For detailed information about the validation data, system layouts, process times, and real-world results, please refer to the associated repository, available at: [ce-dascen-lf-dataset](https://github.com/iwb/ce-dascen-lf-data)
 
 <br>
 
@@ -831,6 +828,11 @@ Scenario 06 (exp17) demonstrated a baseline deviation of +11.5% for a mixed prod
 
 </details>
 
+<br>
+
+---
+
+<br>
 
 <!-- ================================================== -->
 <!-- DETAILED RESULTS - STATION STATISTICS -->
@@ -1148,6 +1150,8 @@ Scenario 06 (exp17) demonstrated an average utilization deviation of -5.7 pp in 
 </table>
 
 </details>
+
+<br>
 
 ---
 
