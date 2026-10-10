@@ -22,21 +22,20 @@ A SimPy-based discrete event simulation framework for modeling and analyzing dis
   - [1.3 Research Context](#13-research-context)
 - [2. Installation](#2-installation)
 - [3. System Architecture](#3-system-architecture)
-- [4. Documentation](#4-documentation)
-- [5. Usage Instructions](#5-usage-instructions)
-  - [5.1 Quick Start](#51-quick-start)
-  - [5.2 Basic Commands](#52-basic-commands)
-  - [5.3 Command Options](#53-command-options)
-  - [5.4 Usage Examples](#54-usage-examples)
-- [6. Experiments Overview](#6-experiments-overview)
-  - [6.1 Verification Experiments](#61-verification-experiments)
-  - [6.2 Validation Experiments](#62-validation-experiments)
-- [7. Configuration Hiearchy](#7-configuration-hierarchy)
-- [8. Output Files](#8-output-files)
-  - [8.1 Core Outputs](#81-core-outputs)
-  - [8.2 Additional Outputs](#82-additional-outputs)
-  - [8.3 Output Configuration](#83-output-configuration)
-- [9. Project Structure](#9-project-structure)
+- [4. Usage Instructions](#4-usage-instructions)
+  - [4.1 Quick Start](#41-quick-start)
+  - [4.2 Basic Commands](#42-basic-commands)
+  - [4.3 Command Options](#43-command-options)
+  - [4.4 Usage Examples](#44-usage-examples)
+- [5. Experiments Overview](#5-experiments-overview)
+  - [5.1 Verification Experiments](#51-verification-experiments-exp01-exp11)
+  - [5.2 Validation Experiments](#52-validation-experiments-exp12-exp17)
+- [6. Configuration Hierarchy](#6-configuration-hierarchy)
+- [7. Output Files](#7-output-files)
+  - [7.1 Core Outputs](#71-core-outputs)
+  - [7.2 Additional Outputs](#72-additional-outputs)
+  - [7.3 Output Configuration](#73-output-configuration)
+- [8. Project Structure](#8-project-structure)
 - [Citation](#citation)
 - [License](#license)
 - [References](#references)
@@ -340,12 +339,11 @@ Feature and capability verification tests (11 experiments):
 - `exp06`, `exp10`, `exp11`: Quality management with condition-based routing
 
 ### 5.2 Validation Experiments (exp12-exp17)
-Validation experiments based on the gathered data set in a learning factory (see [ce-dascen-lf-data](https://github.com/iwb/ce-dascen-lf-data)):
+Validation against empirical data from six disassembly experiments in a learning factory (6 experiments and 2 sensitivity runs). The real-world data set is available at [ce-dascen-lf-data](https://github.com/iwb/ce-dascen-lf-data):
+- `exp12` to `exp17`: Scenarios 01 to 06 with different product portfolios (mixed or HD only), system designs (line or workshop layouts with three to five workstations), and processing types (manual or tool-assisted)
+- `exp14_scenario_03_sensitivity`, `exp17_scenario_06_sensitivity`: Sensitivity runs for scenarios 03 and 06 with adjusted processing times
 
-> **⚠️ Note:** The documentation of the validation experiments is being revised. As a result, these experiments are not currently available and have been removed from the configuration.
-
-For detailed experiment descriptions and configurations, see [experiments_overview.md](docs/experiments_overview.md).
-
+The experiment descriptions, the calculation rules, and the detailed results are documented in [`docs/experiments_overview.md`](docs/experiments_overview.md). The simulation outputs of all validation runs and the workbook used to calculate the deviations are available in [`validation/`](validation/).
 
 
 ## 6. Configuration Hierarchy
@@ -395,7 +393,7 @@ For more information on configuring outputs and other system settings, see [conf
 ## 8. Project Structure
 
 ```
-ce-disassembly-simulation-simpy/
+ce-dascen-sim/
 ├── config/
 │   ├── default_config.json       # Process parameters, resource defaults
 │   ├── runtime_config.json       # Output and visualization settings
@@ -406,6 +404,7 @@ ce-disassembly-simulation-simpy/
 ├── src/
 │   ├── simulation.py             # Main simulation engine
 │   ├── station.py                # Station processing logic
+│   ├── station_state.py          # Station state machine for time tracking
 │   ├── product.py                # Product definitions
 │   ├── g.py                      # Global configuration
 │   ├── source.py                 # Supply generation
@@ -414,11 +413,20 @@ ce-disassembly-simulation-simpy/
 │   ├── breakdowns.py             # Equipment breakdowns
 │   ├── breaks.py                 # Work shifts
 │   ├── logging.py                # Event logging
-│   └── simulation_monitor.py     # Performance tracking
+│   ├── simulation_monitor.py     # Performance tracking
+│   └── validation.py             # Input validation of configuration files
 ├── docs/                         # Documentation files
-├── output/                       # Simulation results
+├── validation/
+│   ├── outputs/                  # Simulation outputs of the validation runs
+│   ├── validation_results.xlsx   # Calculation of the validation results
+│   └── README.md                 # Description of the validation folder
+├── output/                       # Simulation results (created at runtime, not tracked)
+├── config_manager.py             # Hierarchical configuration management
+├── functions.py                  # Transport and material flow functions
+├── helper_functions.py           # Helper functions (logging, structure, timing)
 ├── requirements.txt              # Python dependencies
 ├── run_simulation.py             # Main entry point
+├── LICENSE                       # License
 └── README.md                     # This file
 ```
 
