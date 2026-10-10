@@ -1,0 +1,6 @@
+station,total_available_time,busy_time,blocked_time,waiting_time,failure_time,closed_time,product_count
+ws-01_S1toS8,2399.0,2364.8,3.0,31.3,0,0,8
+ws-02_S1toS8,2399.0,2301.4,3.0,94.6,0,0,8
+ws-03_S1toS8,2399.0,2179.0,2.8,217.2,0,0,8
+ws-04_S1toS8,2399.0,2178.7,2.6,217.7,0,0,7
+logistics_resource_01,2399.0,89.7,0.0,2309.4,0,0,123
